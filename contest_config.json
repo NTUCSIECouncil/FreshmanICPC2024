@@ -21,82 +21,82 @@
             "id": 2,
             "type": "test"
         },
-        "2024A": {
+        "A": {
             "auto-upload": true,
             "id": 20,
             "type": "contest"
         },
-        "2024B": {
+        "B": {
             "auto-upload": true,
             "id": 21,
             "type": "contest"
         },
-        "2024C": {
+        "C": {
             "auto-upload": true,
             "id": 22,
             "type": "contest"
         },
-        "2024D": {
+        "D": {
             "auto-upload": true,
             "id": 23,
             "type": "contest"
         },
-        "2024E": {
+        "E": {
             "auto-upload": true,
             "id": 24,
             "type": "contest"
         },
-        "2024F": {
+        "F": {
             "auto-upload": true,
             "id": 25,
             "type": "contest"
         },
-        "2024G": {
+        "G": {
             "auto-upload": true,
             "id": 26,
             "type": "contest"
         },
-        "2024H": {
+        "H": {
             "auto-upload": true,
             "id": 27,
             "type": "contest"
         },
-        "2024I": {
+        "I": {
             "auto-upload": true,
             "id": 28,
             "type": "contest"
         },
-        "2024J": {
+        "J": {
             "auto-upload": true,
             "id": 29,
             "type": "contest"
         },
-        "2024K": {
+        "K": {
             "auto-upload": true,
             "id": 30,
             "type": "contest"
         },
-        "2024L": {
+        "L": {
             "auto-upload": true,
             "id": 31,
             "type": "contest"
         },
-        "2024M": {
+        "M": {
             "auto-upload": true,
             "id": 32,
             "type": "contest"
         },
-        "2024N": {
+        "N": {
             "auto-upload": true,
             "id": 33,
             "type": "contest"
         },
-        "2024O": {
+        "O": {
             "auto-upload": true,
             "id": 34,
             "type": "contest"
         },
-        "2024P": {
+        "P": {
             "auto-upload": true,
             "id": 35,
             "type": "contest"
