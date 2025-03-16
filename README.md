@@ -4,13 +4,16 @@
 
 ## Judge
 
-（TBA）
+https://academic-judge.csie.ntu.edu.tw/
 
 ## Problem content
 
 ### Problem ID
 
-- 2024[A-P]: 正式賽題目
+- 2024[A-P]：正式賽題目
+- test[A-Z]：測試用題目
+
+branch 的命名請用年份加題號，例如 `2024A`、`2024O`。題目資料夾的命名請單用題號，例如 `A`、`O`。
 
 ### What you need to do
 
@@ -117,9 +120,43 @@ tps invoke ${path-to-code}
 ```
 就可以在測資已經生好的前提下，對位於 `path-to-code` 這個路徑的程式碼進行測試。
 
-## 格式檢查與自動上傳、生題本工具
+## 格式檢查與自動上傳
 
-（TODO）
+_[Note：discord 系統頻道尚未啟用]_
+
+只要題目 push 到這個 repo，所有有修改的題目資料夾就會被自動檢查格式並嘗試上傳到 judge，基本上只要按照上述的格式就沒問題。檢查和上傳成功與否會回報在 discord 系統頻道，同時附上執行紀錄。比較需要注意的是，如果你有自己編譯任何東西的執行檔，並且它沒有副檔名，請記得不要把它 push 上來。
+
+通過格式檢查的題目會被自動上傳到 judge，每個題目在 `contest_config.json` 裡會有自己的設定，例如：
+```json
+"template": {
+    "auto-upload": true,
+    "id": 1,
+    "type": "test"
+}
+```
+`template` 對應題目資料夾的名字。`auto-upload` 代表是否要自動上傳，取消的話不會上傳也不會檢查格式。`type` 有：
+- `test`：純測試用題目。
+- `practice`：測機用題目。
+- `contest`：比賽題目。
+`id` 代表在 judge 上的題目編號，這裡可以看到上傳到 judge 後你的題目應該要出現在哪一題。這個檔案應該已經寫好了，不需要自己去改。
+
+如果你發現 discord bot 有收到你的 commit，但過很久之後 judge 上的題目都沒有更新，bot 也不講話，那可能代表：
+- 跑一次 `tps gen` 要花太多時間（目前設的時限是 10 分鐘，超過應該不太正常）。
+- `tps gen` 中有 fail。
+- 自動上傳的 server 因為不明原因死了。
+
+### 強制上傳
+
+_[Note：discord 系統頻道尚未啟用]_
+
+手動檢查題目資料夾格式並嘗試上傳到 judge。在 Discord 的系統頻道打
+```
+!force-update ${commit or branch} ${problem ID}
+```
+
+## 生題本工具
+
+（todo）
 
 ## Credit
 
