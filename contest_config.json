@@ -16,6 +16,11 @@
             "id": 1,
             "type": "test"
         },
+        "testB": {
+            "auto-upload": true,
+            "id": 2,
+            "type": "test"
+        },
         "2024A": {
             "auto-upload": true,
             "id": 20,
