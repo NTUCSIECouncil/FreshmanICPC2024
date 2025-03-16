@@ -15,6 +15,86 @@
             "auto-upload": true,
             "id": 1,
             "type": "test"
+        },
+        "2024A": {
+            "auto-upload": true,
+            "id": 20,
+            "type": "contest"
+        },
+        "2024B": {
+            "auto-upload": true,
+            "id": 21,
+            "type": "contest"
+        },
+        "2024C": {
+            "auto-upload": true,
+            "id": 22,
+            "type": "contest"
+        },
+        "2024D": {
+            "auto-upload": true,
+            "id": 23,
+            "type": "contest"
+        },
+        "2024E": {
+            "auto-upload": true,
+            "id": 24,
+            "type": "contest"
+        },
+        "2024F": {
+            "auto-upload": true,
+            "id": 25,
+            "type": "contest"
+        },
+        "2024G": {
+            "auto-upload": true,
+            "id": 26,
+            "type": "contest"
+        },
+        "2024H": {
+            "auto-upload": true,
+            "id": 27,
+            "type": "contest"
+        },
+        "2024I": {
+            "auto-upload": true,
+            "id": 28,
+            "type": "contest"
+        },
+        "2024J": {
+            "auto-upload": true,
+            "id": 29,
+            "type": "contest"
+        },
+        "2024K": {
+            "auto-upload": true,
+            "id": 30,
+            "type": "contest"
+        },
+        "2024L": {
+            "auto-upload": true,
+            "id": 31,
+            "type": "contest"
+        },
+        "2024M": {
+            "auto-upload": true,
+            "id": 32,
+            "type": "contest"
+        },
+        "2024N": {
+            "auto-upload": true,
+            "id": 33,
+            "type": "contest"
+        },
+        "2024O": {
+            "auto-upload": true,
+            "id": 34,
+            "type": "contest"
+        },
+        "2024P": {
+            "auto-upload": true,
+            "id": 35,
+            "type": "contest"
         }
     }
 }
