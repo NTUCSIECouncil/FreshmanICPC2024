@@ -1,0 +1,20 @@
+{
+    "contests": {
+        "test": {
+            "title": "NTU CSIE - Freshman ICPC 2024 Test"
+        },
+        "practice": {
+            "title": "NTU CSIE - Freshman ICPC 2024 Practice Session"
+        },
+        "contest": {
+            "title": "NTU CSIE - Freshman ICPC 2024"
+        }
+    },
+    "tasks": {
+        "testA": {
+            "auto-upload": true,
+            "id": 1,
+            "type": "test"
+        }
+    }
+}
