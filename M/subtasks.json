@@ -2,7 +2,7 @@
 	"global_validators": ["val.cpp"],
 	"subtasks": {
 		"full": {
-			"index": 0,
+			"index": 1,
 			"score": 100,
 			"text": "Flag is correct"
 		}
