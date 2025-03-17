@@ -13,6 +13,6 @@ MingleWithFriends
 └── secret
 ```
 
-#### Note
+###### Note
 
 Tetracuspid is also called "Astroid". It is named after the number of cusps it has. The valve has four cusps, hence the name "tetracuspid".
