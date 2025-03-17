@@ -1,17 +1,15 @@
-@subtask samples
-manual sample1.in
-manual sample2.in
+@subtask flag1
+gen 1
 
-@subtask full
-gen 2 1
-gen 1000000000 1
-gen 372648265 1
-gen 87878787 1
-gen 3 1
-gen 1000000000 100
-gen 239847923 100
-gen 839859454 100
-gen 100 100
-gen 101 100
-gen 102 100
-gen 200 100
+@subtask flag2
+gen 2
+
+@subtask flag3
+gen 3
+
+@subtask flag4
+gen 4
+
+@subtask flag5
+gen 5
+

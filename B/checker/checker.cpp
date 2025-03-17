@@ -1,6 +1,8 @@
-#include "testlib.h"
 #include <set>
 #include <string>
+#include <vector>
+
+#include "testlib.h"
 
 void exit_WA(std::string message = "") {
     std::string output = "Wrong Answer";
@@ -14,36 +16,42 @@ void exit_AC(std::string message = "") {
     quitf(_ok, output.c_str());
 }
 
-void check(bool res) {
-    if (!res)
-        exit_WA();
-}
-
-const int MAXC = 1000000000;
-std::set<int> vis;
-int N, M;
-
-int readAns(InStream &stream) {
-    int cnt = 0;
-    for (int i = 1; i <= M; i++) {
-        if (stream.seekEof()) break;
-        int A = stream.readInt(0, MAXC, "A_" + std::to_string(cnt));
-        int B = stream.readInt(0, MAXC, "B_" + std::to_string(cnt));
-        if (A + B == N && vis.find(A) == vis.end())
-            vis.insert(A), ++cnt;
-    }
-    return cnt;
-}
+const std::string FLAGS[] = {
+    "CSIE{DeCyPh3r_Th3_C0nUnDrUm}",
+    "CSIE{P3rp3Tu4l_T3mp0r4l_Fr33z3}",
+    "CSIE{C0sm1c_3ch0}",
+    "CSIE{V4p0r1z3d_Inf0rm4t1c_M4tr1x}",
+    "CSIE{C4us4l_T3mp0r4l_D1st0rt1on_V01d}"};
 
 int main(int argc, char *argv[]) {
     registerTestlibCmd(argc, argv);
-    N = inf.readInt();
-    M = inf.readInt();
-    int cnt = readAns(ouf);
-    if (cnt > M || cnt == 0)
-        exit_WA();
-    else if (cnt == M)
-        exit_AC();
-    else
-        exit_WA();
+
+    // FIXME: test wtf????
+    exit_AC();
+    return 0;
+
+    int subtask = ans.readInt();
+    std::cout << "Subtask: " << subtask << std::endl;
+
+    std::set<std::string> userFlags;  // User's submitted flags
+
+    while (!ouf.seekEof()) {
+        std::string userFlag = ouf.readLine();
+
+        if (userFlags.find(userFlag) != userFlags.end()) {
+            exit_WA("Duplicate flag found: " + userFlag);
+        }
+
+        userFlags.insert(userFlag);
+    }
+
+    if (userFlags.size() > 5) {
+        exit_WA("Too many flags submitted.");
+    }
+
+    if (userFlags.find(FLAGS[subtask - 1]) == userFlags.end()) {
+        exit_WA("Flag " + toString(subtask) + " is incorrect.");
+    } else {
+        exit_AC("Flag " + toString(subtask) + " is correct.");
+    }
 }

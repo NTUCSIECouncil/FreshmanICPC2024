@@ -7,5 +7,4 @@ int main() {
     cout << "CSIE{C0sm1c_3ch0}" << endl;
     cout << "CSIE{V4p0r1z3d_Inf0rm4t1c_M4tr1x}" << endl;
     cout << "CSIE{C4us4l_T3mp0r4l_D1st0rt1on_V01d}" << endl;
-    cout << "additional FLAG" << endl;
 }
