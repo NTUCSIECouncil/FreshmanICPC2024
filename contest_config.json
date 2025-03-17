@@ -1,0 +1,105 @@
+{
+    "contests": {
+        "test": {
+            "title": "NTU CSIE - Freshman ICPC 2024 Test"
+        },
+        "practice": {
+            "title": "NTU CSIE - Freshman ICPC 2024 Practice Session"
+        },
+        "contest": {
+            "title": "NTU CSIE - Freshman ICPC 2024"
+        }
+    },
+    "tasks": {
+        "testA": {
+            "auto-upload": true,
+            "id": 1,
+            "type": "test"
+        },
+        "testB": {
+            "auto-upload": true,
+            "id": 2,
+            "type": "test"
+        },
+        "A": {
+            "auto-upload": true,
+            "id": 20,
+            "type": "contest"
+        },
+        "B": {
+            "auto-upload": true,
+            "id": 21,
+            "type": "contest"
+        },
+        "C": {
+            "auto-upload": true,
+            "id": 22,
+            "type": "contest"
+        },
+        "D": {
+            "auto-upload": true,
+            "id": 23,
+            "type": "contest"
+        },
+        "E": {
+            "auto-upload": true,
+            "id": 24,
+            "type": "contest"
+        },
+        "F": {
+            "auto-upload": true,
+            "id": 25,
+            "type": "contest"
+        },
+        "G": {
+            "auto-upload": true,
+            "id": 26,
+            "type": "contest"
+        },
+        "H": {
+            "auto-upload": true,
+            "id": 27,
+            "type": "contest"
+        },
+        "I": {
+            "auto-upload": true,
+            "id": 28,
+            "type": "contest"
+        },
+        "J": {
+            "auto-upload": true,
+            "id": 29,
+            "type": "contest"
+        },
+        "K": {
+            "auto-upload": true,
+            "id": 30,
+            "type": "contest"
+        },
+        "L": {
+            "auto-upload": true,
+            "id": 31,
+            "type": "contest"
+        },
+        "M": {
+            "auto-upload": true,
+            "id": 32,
+            "type": "contest"
+        },
+        "N": {
+            "auto-upload": true,
+            "id": 33,
+            "type": "contest"
+        },
+        "O": {
+            "auto-upload": true,
+            "id": 34,
+            "type": "contest"
+        },
+        "P": {
+            "auto-upload": true,
+            "id": 35,
+            "type": "contest"
+        }
+    }
+}
