@@ -2,11 +2,11 @@ Duallp loved spending time with zir friends. Every weekend, Duallp and zir best 
 
 One day, Duallp's friend, Tetracuspid, moved away to a far-off land. Duallp was heartbroken. Ze had been a constant source of joy and comfort for Duallp, and now they were separated by miles of land and sea. Duallp missed zir friend terribly. You, as a friend of Duallp, want to help zir feel better. You decide to find the hidden words written by Tetracuspid. The only clue you have is the executable file that Tetracuspid left behind before leaving. Can you find the hidden words and bring a smile to Duallp's face?
 
-#### Objective
+###### Objective
 
 Your task is to find the hidden words in the executable file. The hidden words are the key to unlocking the memories that Tetracuspid left behind. You must find the hidden words and share them with Duallp to bring a smile to zir face. The hidden words was written in the format `CSIE{<flag>}`.
 
-#### File Structure
+###### File Structure
 
 ```
 MingleWithFriends
