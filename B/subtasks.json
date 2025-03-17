@@ -2,27 +2,27 @@
   "global_validators": ["val.cpp"],
   "subtasks": {
     "flag1": {
-      "index": 0,
+      "index": 1,
       "score": 20,
       "text": "Flag 1"
     },
     "flag2": {
-      "index": 1,
+      "index": 2,
       "score": 20,
       "text": "Flag 2"
     },
     "flag3": {
-      "index": 2,
+      "index": 3,
       "score": 20,
       "text": "Flag 3"
     },
     "flag4": {
-      "index": 3,
+      "index": 4,
       "score": 20,
       "text": "Flag 4"
     },
     "flag5": {
-      "index": 4,
+      "index": 5,
       "score": 20,
       "text": "Flag 5"
     }

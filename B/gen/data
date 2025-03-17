@@ -1,15 +1,29 @@
-@subtask flag1
+@testset f1
 gen 1
 
-@subtask flag2
+@testset f2
 gen 2
 
-@subtask flag3
+@testset f3
 gen 3
 
-@subtask flag4
+@testset f4
 gen 4
 
-@subtask flag5
+@testset f5
 gen 5
 
+@subtask flag1
+@include f1
+
+@subtask flag2
+@include f2
+
+@subtask flag3
+@include f3
+
+@subtask flag4
+@include f4
+
+@subtask flag5
+@include f5
