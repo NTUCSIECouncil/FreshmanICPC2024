@@ -26,14 +26,9 @@ const std::string FLAGS[] = {
 int main(int argc, char *argv[]) {
     registerTestlibCmd(argc, argv);
 
-    // FIXME: test wtf????
-    exit_AC();
-    return 0;
-
     int subtask = ans.readInt();
-    std::cout << "Subtask: " << subtask << std::endl;
 
-    std::set<std::string> userFlags;  // User's submitted flags
+    std::set<std::string> userFlags;
 
     while (!ouf.seekEof()) {
         std::string userFlag = ouf.readLine();
