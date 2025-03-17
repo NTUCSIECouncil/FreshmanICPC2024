@@ -1,4 +1,4 @@
-![A black hole](blackhole.jpg)
+![A cute black hole](blackhole.jpg)
 
 As you stare into the depths of the black hole, you feel an unusual pull—a strange attraction that draws you closer. No matter how near you get, the black hole seems to protect something, shrouded in mystery. As you carefully observe the edges of the black hole, you notice something odd, a subtle clue that hints at a hidden message waiting to be uncovered.
 

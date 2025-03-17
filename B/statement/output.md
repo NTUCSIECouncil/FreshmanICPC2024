@@ -1,3 +1,3 @@
-Please output $M$ lines. Each line should contain two integers $a$ and $b$, separated by a single space. Ensure that $a$ and $b$ satisfy the constraints in the problem description. 
+Please output all the flags you found, one per line. The order of the flags does not matter. Each flag must be output on a new line, without any additional spaces or characters. Duplicates are not allowed.
 
-If your output exceeds $M$ lines, contains any unexpected characters, or if the numbers fail to meet the problem constraints, you solution will be marked as "Wrong Answer" on the testdata.
+Note: If your output contains any incorrect or duplicate flags, your solution will be judged as Wrong Answer.
