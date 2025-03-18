@@ -8,7 +8,7 @@
 	"description": "",
 	"has_grader": false,
 	"has_checker": false,
-	"ignore_checker": false,
+	"ignore_checker": true,
 	"tps_web_url": "",
 	"feedback_level": "full",
 	"max_submission_number": null,
