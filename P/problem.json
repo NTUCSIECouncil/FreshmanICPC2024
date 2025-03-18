@@ -7,7 +7,7 @@
 	"type": "Batch",
 	"description": "",
 	"has_grader": false,
-	"has_checker": true,
+	"has_checker": false,
 	"ignore_checker": false,
 	"tps_web_url": "",
 	"feedback_level": "full",
