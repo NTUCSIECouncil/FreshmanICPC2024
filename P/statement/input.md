@@ -1,3 +1,3 @@
-輸入共一行，包含一個整數 $n$。
+The input consists of a single line, containing an integer $n$.
 
 - $1\leq n\leq 10^6$

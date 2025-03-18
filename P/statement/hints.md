@@ -1,1 +1,1 @@
-看看你左邊的同學，再看看你右邊的同學，你們之間要有一個人會做這題。
+Look at the student on your left, then look at the student on your right. One of you will get AC on this question.

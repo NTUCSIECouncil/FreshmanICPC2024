@@ -1,7 +1,7 @@
-Professor P 是喵喵監督式創新工程學系（**C**ats-**S**upervised **I**nnovative **E**ngineering）的知名大刀教授，他曾在其聲名遠播的貓咪排列導論（Introduction to Cats Permutation）課程提到以下金句：
+Professor P, a renowned and strict professor from the Cats-Supervised Innovative Engineering (CSIE) department, is famous for his iconic course Introduction to Cats Permutation. During one of his lectures, he shared the following memorable quote:
 
-> 看看你左邊的同學，再看看你右邊的同學，你們之間有一個人會被當。
+> **Look at the student on your left, then look at the student on your right. One of you will fail.**
 
-Professor P 在備課時想到一個有趣的貓貓排列（Cat Permutation）問題：有 $n$ 隻貓咪，每隻貓咪依據體型大小給定一個編號 $1, 2, \ldots, n$，請問有幾種排列方式使得編號差 $1$ 的貓咪不會由左而右相鄰遞增出現呢？
+While preparing for his classes, Professor P came across an interesting Cat Permutation problem: Given $n$ cats, each with a unique size-based number $1, 2, \ldots, n$, how many permutations exist such that no two consecutive numbers appear in an increasing order from left to right?
 
-舉例來說，$n=3$ 時，$[1, 3, 2], [2, 1, 3], [3, 2, 1]$ 是合法的排列，而 $[1, 2, 3], [2, 3, 1], [3, 1, 2]$ 是不合法的排列。
+For example, when $n=3$, the valid permutations are $[1, 3, 2]$, $[2, 1, 3]$, and $[3, 2, 1]$, while the invalid permutations are $[1, 2, 3]$, $[2, 3, 1]$, and $[3, 1, 2]$.

@@ -1,1 +1,1 @@
-輸出一行，包含一個整數 $ans$，代表合法的排列數,因為答案可能很大，請將答案與 $10^9+7$ 取模後再輸出。
+Output a single integer $ans$, representing the number of valid permutations. Since $ans$ can be very large, output the answer modulo $10^9+7$.
