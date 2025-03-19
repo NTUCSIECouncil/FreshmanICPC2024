@@ -1,9 +1,10 @@
 #include <iostream>
+#include <cassert>
 using namespace std;
 
 typedef long long ll;
 #define P 1000000007
-#define MAXN 1500000
+#define MAXN 150000
 
 int add(int a, int b){
     return (a + b) % P;
@@ -58,6 +59,8 @@ int binom(int n, int k){
     if (k < 0 || k > n) {
         return 0;
     }
+    assert(n <= MAXN);
+    assert(k <= MAXN);
     return mod_div(factorial[n], mul(factorial[k], factorial[n - k]));
 }
 
@@ -78,8 +81,8 @@ int main() {
     int d = gcd(n, k);
     if((k/d) % 2 == 1 && (t - n/d) % 2 == 0){
         int sum = 0;
-        for(int i = 1; i <= d && i*n <= d*t; i+=2){
-            sum = add(sum, mul(binom(d, i), binom(n-1 + (t - i*n/d)/2, n-1)));
+        for(int i = 1; i <= d && (ll)i*(ll)n <= (ll)d*(ll)t; i+=2){
+            sum = add(sum, mul(binom(d, i), binom(n-1 + (t - i*(n/d))/2, n-1)));
         }
         cout << sum << endl;
     }
