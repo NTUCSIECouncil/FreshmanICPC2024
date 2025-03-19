@@ -1,7 +1,5 @@
-Now, let's take a step up in difficulty from a plus b problem.
+You have $n$ coins arranged in a circle, all initially facing heads up. In each operation, you can choose any $k$ consecutive coins and flip them simultaneously.
 
-You are given two integers $N$ and $M$. Your task is to construct $M$ distinct pairs of integers $(a, b)$ such that $a + b = N$.
+Determine the number of distinct ways to make all coins face tails up after exactly $t$ operations.
 
-Two pairs are considered distinct if either $a$ or $b$ (or both) differs. For example, $(3, 2)$ is distinct from $(2, 3)$.
-
-**Warning: Ensure that both $a$ and $b$ are integers satisfying $0 \leq a, b \leq 10^9$.**
+Two sequences of operations are considered the same if one can be transformed into the other by reordering the operations.

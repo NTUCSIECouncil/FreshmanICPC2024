@@ -1,4 +1,4 @@
-The first line contains two integers $N$ and $M$.
+A single line containing three positive integers $n, k, t$.
 
-- $2 \le N \le 10^9$
-- $1 \le M \le \min(100, N)$
+- $1 \leq n, t \leq 10^6$
+- $1 \leq k \leq n$
