@@ -1,11 +1,14 @@
 #include "testlib.h"
-#include <algorithm>
+
+const int MAXN = 100000;
 
 int main(int argc, char *argv[]) {
     registerValidation(argc, argv);
-    int N = inf.readInt(2, 1000000000, "N");
+    int n = inf.readInt(1, MAXN, "n");
     inf.readSpace();
-    int M = inf.readInt(1, std::min(100, N), "M");
+    int k = inf.readInt(1, std::min(MAXN, n), "k");
+    inf.readSpace();
+    int t = inf.readInt(1, MAXN, "t");
     inf.readEoln();
     inf.readEof();
 }
