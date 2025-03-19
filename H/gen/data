@@ -1,17 +1,34 @@
 @subtask samples
 manual sample1.in
 manual sample2.in
+manual sample3.in
 
 @subtask full
-gen 2 1
-gen 1000000000 1
-gen 372648265 1
-gen 87878787 1
-gen 3 1
-gen 1000000000 100
-gen 239847923 100
-gen 839859454 100
-gen 100 100
-gen 101 100
-gen 102 100
-gen 200 100
+@include samples
+manual test1.in
+manual test2.in
+manual test3.in
+manual test4.in
+manual test5.in
+gen 1
+gen 2
+gen 3
+gen 4
+gen 5
+gen 878787
+gen 114514
+gen 11451419
+gen 48763
+gen 487633333
+gen 42
+gen 2024
+gen 123456789
+gen 987654321
+gen 135792468
+gen 60
+gen 168
+gen 360
+gen 504
+gen 660
+gen 1092
+gen 2448
