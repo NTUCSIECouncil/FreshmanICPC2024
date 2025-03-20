@@ -14,14 +14,6 @@ void exit_AC(std::string message = "") {
     quitf(_ok, output.c_str());
 }
 
-void check(bool res) {
-    if (!res)
-        exit_WA();
-}
-
-const int MAXC = 1000000000;
-std::set<int> vis;
-
 int main(int argc, char *argv[]) {
     registerTestlibCmd(argc, argv);
     int N = ouf.readInt();
