@@ -9,7 +9,7 @@ Your task is to find the hidden words in the executable file. The hidden words a
 ###### File Structure
 
 ```
-MingleWithFriends
+ws5:/tmp2/mgf
 └── secret
 ```
 
