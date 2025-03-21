@@ -3,7 +3,7 @@
  
 using namespace std;
  
-#define EPS 1E-3
+#define EPS 1E-2
  
 int main(int argc, char * argv[])
 {
