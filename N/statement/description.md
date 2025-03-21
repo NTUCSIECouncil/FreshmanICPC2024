@@ -2,7 +2,7 @@ In the Department of CSIE, there is a Probability Laboratory located in the base
 
 As an enthusiastic member of the lab, you are tasked with determining the winning probability of your current hand. Given two Texas Hold'em starting hands (one for yourself and one for your opponent), you need to calculate your chances of winning.  
 
-For this problem, we assume the following conditions to make the problem simpler:  
+For this problem, we assume the following conditions to make the problem simpler:
 
 - The game consists of only two players.  
 - No blinds or betting rules are considered.
@@ -14,7 +14,7 @@ For this problem, we assume the following conditions to make the problem simpler
 The following are hand rankings sorting from highest to lowest priority. Note that in the following examples, in the suits part, S stands for spade, H for Heart, D for Diamond and C for club. For example, S5 means spade with number 5.
 
 1. Royal Flush:  
-   - Five highest-ranking consecutive cards (10, J, Q, K, A) of the same suit.  
+   - Five highest-ranking consecutive cards (10, J, Q, K, A) of the same suit.
    - Example:  
      - S10, SJ, SQ, SK, SA  
      - C10, CJ, CQ, CK, CA  
@@ -65,7 +65,7 @@ The following are hand rankings sorting from highest to lowest priority. Note th
      - H3, D3, C7, S7, D9  
 
 9. One Pair:  
-   - One pair, plus three unrelated cards.  
+   - One pair, plus three unrelated cards.
    - Example:  
      - S2, H2, D4, C7, S10
      - H9, D9, C5, S6, DK

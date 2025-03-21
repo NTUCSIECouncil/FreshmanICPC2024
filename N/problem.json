@@ -3,7 +3,7 @@
 	"code": "pN",
 	"title": "Never Gonna Fold Them Up",
 	"memory_limit": 256,
-	"time_limit": 1.0,
+	"time_limit": 5.0,
 	"type": "Batch",
 	"description": "",
 	"has_grader": false,
