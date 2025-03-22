@@ -79,7 +79,10 @@ int main() {
     init_factorial();
     int n, k, t; cin >> n >> k >> t;
     int d = gcd(n, k);
-    if((k/d) % 2 == 1 && (t - n/d) % 2 == 0){
+    if(n == k){
+        cout << t % 2 << endl;
+    }
+    else if((k/d) % 2 == 1 && (t - n/d) % 2 == 0){
         int sum = 0;
         for(int i = 1; i <= d && i*n <= d*t; i+=2){
             sum = add(sum, mul(binom(d, i), binom(n-1 + (t - i*(n/d))/2, n-1)));
