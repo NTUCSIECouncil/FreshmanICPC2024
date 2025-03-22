@@ -1,7 +1,7 @@
 #include "testlib.h"
 using namespace std;
 
-const int N=1000000;
+const int N=10000000;
 
 int main() {
 	registerValidation();

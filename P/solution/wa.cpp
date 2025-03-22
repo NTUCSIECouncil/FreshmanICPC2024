@@ -7,9 +7,9 @@ signed main() {
 	ios::sync_with_stdio(false);cin.tie(0);
 	int n;
 	cin>>n;
-	vector<ll> dp(n+1, 1);
+	vector<int> dp(3, 1);
 	for(int i=3;i<=n;i++) {
-		dp[i]=((dp[i-1]*(i-1))%MOD+(dp[i-2]*(i-2))%MOD)%MOD;
+		dp[i%3]=((dp[(i+2)%3]*(i-1))%MOD+(dp[(i+1)%3]*(i-2))%MOD)%MOD;
 	}
-	cout<<dp[n]<<"\n";
+	cout<<dp[n%3]<<"\n";
 }

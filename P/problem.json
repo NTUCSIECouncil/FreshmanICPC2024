@@ -3,7 +3,7 @@
 	"code": "Permutation",
 	"title": "Professor P",
 	"memory_limit": 1,
-	"time_limit": 1.0,
+	"time_limit": 16.0,
 	"type": "Batch",
 	"description": "",
 	"has_grader": false,
