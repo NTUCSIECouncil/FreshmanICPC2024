@@ -4,9 +4,10 @@ As an enthusiastic member of the lab, you are tasked with determining the winnin
 
 For this problem, we assume the following conditions to make the problem simpler:
 
-- The game consists of only two players.  
+- The game consists of only two players.
 - No blinds or betting rules are considered.
-- Each player is initially dealt two cards. Each player's cards, combined with the community cards on the board, are used to determine the hand ranking.
+- Each player is initially dealt two cards. Each player's cards, combined with three of the community cards on the board, are used to determine the hand ranking.
+  - There are five community cards, each player try to make their ranking as high as possible from using their two cards and three cards from community cards.
 - The deck consists of 52 standard playing cards (no jokers).
 - If two players have the cards of the same rank, it's considered a draw.
 - When there's a draw, you win.
@@ -71,7 +72,7 @@ The following are hand rankings sorting from highest to lowest priority. Note th
      - H9, D9, C5, S6, DK
 
 10. High Card:  
-   - If no players have any valid combinations, the winner is determined by the highest card in their hand.  
+   - If none of the above rules matches, it would be high card.
    - Example:  
      - S10, H3, D6, C8, SA
      - H5, D2, C9, SJ, QD
