@@ -1,0 +1,12 @@
+{
+    "sol.cpp": { "verdict": "model_solution" },
+    "wa1.cpp": { "verdict": "incorrect" },
+    "wa2.cpp": { "verdict": "incorrect" },
+    "wa3.cpp": { "verdict": "incorrect" },
+    "wa4.cpp": { "verdict": "incorrect" },
+    "bubble_sort.cpp": {
+        "verdict": "time_limit",
+        "except": {"samples": "correct"}
+    },
+    "merge_sort.cpp": { "verdict": "correct" }
+}
