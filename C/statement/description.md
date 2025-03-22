@@ -1,4 +1,4 @@
-## Task Description
+#### Task Description
 
 *"Given $n$ classrooms and $m$ courses, determine a schedule that maximized the total amount of class time within a week."* -- Judge Girl 50308.
 
@@ -6,7 +6,7 @@ As a student of NTU CSIE, you are already quite familiar with this task.
 
 However, as the spring semester is about to begin, you suddenly realize that you haven’t scheduled your own courses yet! The deadline is approaching fast—you have only a few hours left before the course selection system closes at 3 a.m. Now, you must efficiently select and arrange your courses before time runs out.
 
-## Course Selection
+#### Course Selection
 
 You are given $n$ courses. Each course $x$ has the following attributes:
 
