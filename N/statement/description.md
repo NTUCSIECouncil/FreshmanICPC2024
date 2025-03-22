@@ -8,7 +8,7 @@ For this problem, we assume the following conditions to make the problem simpler
 - No blinds or betting rules are considered.
 - Each player is initially dealt two cards. Each player's cards, combined with three of the community cards on the board, are used to determine the hand ranking.
   - There are five community cards, each player try to make their ranking as high as possible from using their two cards and three cards from community cards.
-- The deck consists of 52 standard playing cards (no jokers).
+- The deck consists of 52 standard playing cards (no jokers), so no cards would be repeated.
 - If two players have the cards of the same rank, it's considered a draw.
 - When there's a draw, you win.
 
