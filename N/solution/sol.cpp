@@ -1,12 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define N 5000000
+#define N 100000
 
 struct card
 {
     int suit;
     int number;
 };
+
+int combination[10][3] = {{0,1,2}, {0,1,3}, {0,1,4}, {0,2,3}, {0,2,4}, {0,3,4}, {1,2,3}, {1,2,4}, {1,3,4}, {2,3,4}};
 vector<card> init(4);
 
 bool flush(vector<card> arr)
@@ -19,41 +21,41 @@ bool flush(vector<card> arr)
     return true;
 }
 
-bool highest_straight(vector<card> arr)
+bool highest_straight(vector<int> numbers)
 {
-    return (arr[0].number == 1  && arr[1].number == 10 
-         && arr[2].number == 11 && arr[3].number == 12 && arr[4].number == 13);
+    return (numbers[0] == 1  && numbers[1] == 10  && numbers[2] == 11 && 
+            numbers[3] == 12 && numbers[4] == 13);
 }
 
-bool straight(vector<card> arr)
+bool straight(vector<int> numbers)
 {
-    if (highest_straight(arr))
+    if (highest_straight(numbers))
         return true;
     for(int i=1; i<5; i++)
     {
-        if (arr[i].number != arr[i-1].number + 1)
+        if (numbers[i] != numbers[i-1] + 1)
             return false;
     }
     return true;
 }
 
-bool four(vector<card> arr)
+bool four(vector<int> numbers)
 {
-    return (arr[1].number == arr[0].number  && arr[2].number == arr[0].number && arr[3].number == arr[0].number)
-     || (arr[1].number == arr[4].number  && arr[2].number == arr[4].number && arr[3].number == arr[4].number);
+    return (numbers[1] == numbers[0]  && numbers[2] == numbers[0] && numbers[3] == numbers[0])
+     || (numbers[1] == numbers[4] && numbers[2] == numbers[4] && numbers[3] == numbers[4]);
 }
 
-bool three_of_a_kind(vector<card> arr)
+bool three_of_a_kind(vector<int> numbers)
 {
-    return (arr[1].number == arr[0].number  && arr[2].number == arr[0].number)
-        || (arr[2].number == arr[1].number  && arr[3].number == arr[1].number)
-        || (arr[3].number == arr[2].number  && arr[4].number == arr[2].number);
+    return (numbers[1] == numbers[0] && numbers[2] == numbers[0])
+        || (numbers[2] == numbers[1] && numbers[3] == numbers[1])
+        || (numbers[3] == numbers[2] && numbers[4] == numbers[2]);
 }
 
-bool full_house(vector<card> arr)
+bool full_house(vector<int> numbers)
 {
-    return (arr[1].number == arr[0].number && arr[2].number == arr[0].number && arr[3].number == arr[4].number)
-     || (arr[1].number == arr[0].number  && arr[2].number == arr[4].number && arr[3].number == arr[4].number);
+    return (numbers[1] == numbers[0] && numbers[2] == numbers[0] && numbers[3] == numbers[4])
+     || (numbers[1] == numbers[0]  && numbers[2] == numbers[4] && numbers[3] == numbers[4]);
 }
 
 int num_pairs(vector<card> arr)
@@ -72,19 +74,23 @@ int num_pairs(vector<card> arr)
 
 int which_hand_rankings(vector<card> arr)
 {
-    if (highest_straight(arr) && flush(arr))
+    vector<int> numbers;
+    for (const auto& c: arr)
+        numbers.push_back(c.number);
+    sort(numbers.begin(),numbers.end());
+    if (highest_straight(numbers) && flush(arr))
         return 1;
-    else if (straight(arr) && flush(arr))
+    else if (straight(numbers) && flush(arr))
         return 2;
-    else if (four(arr))
+    else if (four(numbers))
         return 3;
-    else if (full_house(arr))
+    else if (full_house(numbers))
         return 4;
     else if (flush(arr))
         return 5;
-    else if (straight(arr))
+    else if (straight(numbers))
         return 6;
-    else if (three_of_a_kind(arr))
+    else if (three_of_a_kind(numbers))
         return 7;
     else if (num_pairs(arr) == 2)
         return 8;
@@ -96,44 +102,42 @@ int which_hand_rankings(vector<card> arr)
 
 int game()
 {
-    vector<card> sent(3);
-    for(int i=0; i<3; i++)
+    vector<card> sent = init;
+    vector<card> community(5);
+    for(int i=0; i<5; i++)
     {
-        int send = rand() % 52;
-        int suit = send / 13;
-        int number = send % 13 + 1;
-        bool out = false;
-        while(out)
+        while(true)
         {
-            for (int j=0; j<4; j++)
+            int send = rand() % 52;
+            int suit = send / 13;
+            int number = send % 13 + 1;
+            bool repeated = false;
+            for (const auto& c: sent)
             {
-                if (suit == init[j].suit && number == init[j].number)
+                if (suit == c.suit && number == c.number)
+                {
+                    repeated = true;
                     break;
-                if (j == 3)
-                    out = true;
+                }
+            }
+            if (!repeated)
+            {
+                community[i].suit = suit;
+                community[i].number = number;
+                sent.push_back(community[i]);
+                break;
             }
         }
-        sent[i].suit = suit;
-        sent[i].number = number;
     }
-    vector<card> yours(5), opponents(5);
-    yours[0] = init[0];
-    yours[1] = init[1];
-    yours[2] = sent[0];
-    yours[3] = sent[1];
-    yours[4] = sent[2];
-    opponents[0] = init[2];
-    opponents[1] = init[3];
-    opponents[2] = sent[0];
-    opponents[3] = sent[1];
-    opponents[4] = sent[2];
-    sort(yours.begin(),yours.end(),[](card e1,card e2){return e1.number<e2.number;});
-    sort(yours.begin(),yours.end(),[](card e1,card e2){return e1.suit<e2.suit;});
-    sort(opponents.begin(),opponents.end(),[](card e1,card e2){return e1.number<e2.number;});
-    sort(opponents.begin(),opponents.end(),[](card e1,card e2){return e1.suit<e2.suit;});
-    int your_rank = which_hand_rankings(yours);
-    int opponents_rank = which_hand_rankings(opponents);
-    if (your_rank >= opponents_rank)
+    int min_rank_you = 100, min_rank_opponent = 100;
+    for (int i=0; i<10; i++)
+    {
+        vector<card> yours = {init[0], init[1], community[combination[i][0]], community[combination[i][1]], community[combination[i][2]]};
+        vector<card> opponents = {init[2], init[3], community[combination[i][0]], community[combination[i][1]], community[combination[i][2]]};
+        min_rank_you = min(min_rank_you, which_hand_rankings(yours));
+        min_rank_opponent = min(min_rank_opponent, which_hand_rankings(opponents));
+    }
+    if (min_rank_you <= min_rank_opponent)
         return 1;
     else
         return 0;
@@ -141,33 +145,16 @@ int game()
 
 void read_input()
 {
+    map<char, int> suits = {{'S', 0}, {'H', 1}, {'D', 2}, {'C', 3}};
+    map<char, int> numbers = {{'A', 1}, {'2', 2}, {'3', 3}, {'4', 4}, 
+        {'5', 5}, {'6', 6}, {'7', 7}, {'8', 8}, {'9', 9}, {'1', 10}, {'J', 11}, {'Q', 12}, {'K', 13}};
     for(int i=0; i<4; i++)
     {
         string tmp;
         cin >> tmp;
-        if (tmp[0] == 'S')
-            init[i].suit = 0;
-        else if (tmp[0] == 'H')
-            init[i].suit = 1;
-        else if (tmp[0] == 'D')
-            init[i].suit = 2;
-        else
-            init[i].suit = 3;
-
-        if (tmp[1] == 'J')
-            init[i].number = 11;
-        else if (tmp[1] == 'Q')
-            init[i].number = 12;
-        else if (tmp[1] == 'K')
-            init[i].number = 13;
-        else if (tmp[1] == 'A')
-            init[i].number = 1;
-        else if (tmp[1] == '1')
-            init[i].number = 10;
-        else 
-            init[i].number = tmp[1] - '0';
+        init[i].suit = suits[tmp[0]];
+        init[i].number = numbers[tmp[1]];
     }
-
     return;
 }
 
