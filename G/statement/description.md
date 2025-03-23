@@ -1,16 +1,16 @@
-**<span style="color: red;">This is an interactive problem.</span>You can download the sample grader and implementation [here].**
+**<span style="color: red;">This is an interactive problem.</span> You can download the sample grader and implementation [here].**
 
 Abel is a famous mathematician. Recently, he just got married! It's time to think about how to parent their children.
 
 The best thing about toys are they can be both entertaining and educational. While Abel does have lots of toys, they are kind of... eccentric.
 
-Each box in Abel's toy collection contains several bouncy balls. These balls come in $N$ different colors: numbered from $0$ to $n - 1$. There are sufficiently many balls for a single color. When you pick two of these bouncy balls and squeeze one against another, they will *fuse* together and generate a new color! 
+Each box in Abel's toy collection contains several bouncy balls. These balls come in $n$ different colors: numbered from $0$ to $n - 1$. There are sufficiently many balls for a single color. When you pick two of these bouncy balls and squeeze one against another, they will *fuse* together and generate a new color! 
 To prevent chaos, these balls have some very special properties.
 Let $f(a, b)$ denote the color produced when you take color $a$ in the left hand and $b$ in the right hand, then fuse them together.
 
 1. No matter what the colors of the original balls are, the new produced color $f(a, b)$ is always present in the box already.
 2. There is a "transparent color" $e \in \{0, 1, \ldots, n - 1\}$ such that fusing any ball with color $c$ with it will produce a ball with color $f(e, c) = f(c, e) = c$.
-3. For any color $a$ in the box, there is a color $b$ also in the box such that fusing the two balls will produce the transparent color. That is, $f(a, b) = f(b, a) = e$.
+3. There is a way to "revert" the process: for any color $a$ in the box, there is a color $b$ also in the box such that fusing the two balls will produce the transparent color. That is, $f(a, b) = f(b, a) = e$.
 4. Suppose we have three colors in order $a, b, c$, then the fusing result is the same as long as we preserve their order. That is, $f(a, f(b, c)) = f(f(a, b), c)$.
 
 This can be quite fun, but things can go wrong when you *swap hands*. As a proficient mathematician, Abel quickly noticed that these rules does not guarantee that the resulting color will be the same if you swap the balls in your two hands!
@@ -26,14 +26,13 @@ These boxes are called *abelian* boxes. Help Abel determine if a box is *abelian
 
 Your progam has to include the header file `lib????.h` in the beginning. Please notice that you should change this filename to `group.h` when testing your program locally. You can refer to the sample implmentation about this.
 
-你需要完成以下的函式：
 You have to implement the following function:
 ```cpp
 bool is_abelian(int n);
 ```
  - In a test case, `is_abelian` will only be called once.
  - The parameter `n` refers to the variable $n$.
- - The return value should be a boolean value. If the box is *abeliean*, return true. Otherwise, you should return false.
+ - The return value should be a boolean value. If the box is *abelian*, return true. Otherwise, you should return false.
 
 You can call the following function:
 ```cpp
