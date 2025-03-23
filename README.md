@@ -152,7 +152,44 @@ tps invoke ${path-to-code}
 
 ## 生題本工具
 
-（todo）
+要生題本可以直接跑 `statement/stategen.py`，需要安裝 python typer 套件、pandoc、和 xelatex 。另一種選項是用 `statement/stategen.sh`，需要安裝 docker。
+
+### Python Script (`stategen.py`)
+
+在要生題本的題目 `tps gen` 後在 repo 根目錄使用
+```
+python3 statement/stategen.py single ${problem id}
+```
+會在 `${problem id}/statement/` 裡生成一些 `${problem id}` 這個題目的題本用的檔案：
+ 
+- `stategen.description.tex`：將 `description.md` 直接轉成 tex。
+- `stategen.input.tex`：將 `input.md` 直接轉成 tex。
+- `stategen.output.tex`：將 `output.md` 直接轉成 tex。
+- `stategen.hints.tex`（如果有 `hints.md` 的話）：將 `hints.md` 直接轉成 tex。
+- `stategen.info.tex`：define 一些指令，包含一些題目資訊，有
+    - `\InfoProblemTitle`
+    - `\InfoProblemTL`
+    - `\InfoProblemML`
+    - `\InfoProblemIndex`：用 `stategen.py single` 的時候都是 A，用下面的 `stategen.py contest` 的話會照 `contest_config.json` 裡的順序，如果有題目沒資料夾的話它不會佔一個題號，所以有缺題時題號是錯的是正常的。
+- `stategen.samples.tex`：每筆範測會有一行 `\ProblemSample{../tests/XXX.in}{../tests/XXX.out}`，所有 `samples` 裡的測資會被視為範測。
+- `statement.tex`：實際上被編譯的檔案，預設會是 `/statement/default_problem_statement.tex`。這個檔案的所有部分都會直接 input 上述檔案，如果有部分需要寫死（例如 Markdown 轉 LaTeX 會轉爛）就直接在 `statement.tex` 寫死。**不要直接改 `stategen.*.tex` 的內容**。
+
+然後 `/statement/statement.tex` 會被自動編譯，同一個資料夾裡也有一些 script 生出來的檔案：
+
+- `stategen.problem_list.tex`：在一個 `ProblemList` environment 裡面，每個題目會有一行 `\ProblemListEntry{${problem index}}{${problem title}}{${TL}}{${ML}}`。
+- `stategen.problems.tex`：每個題目會有一行 `\Problem{${problem id}}`。
+- `stategen.contest_info.tex`：裡面會 define `\ContestTitle` 這個指令，contest title 與題目所屬的 contest（設定裡的 type）在 `contest_config.json` 裡設定。
+
+大部分的格式設定都寫在 `statement/statement.tex` 裡，要改格式就是直接改這裡的。
+
+其他可以用的指令：
+- `python3 statement/stategen.py all ${contest name}`：生成所有 `${contest name}` 這個 contest 裡的題目需要的題本檔案，然後直接去編譯 `statement/statement.tex` 就可以獲得這個比賽的題本。config 裡有但沒資料夾的題目會自動跳過，記得要先 tps gen 過所有題目。
+- `python3 statement/stategen.py clean-single ${problem id}`：把 `stategen.*.tex` 刪掉
+- `python3 statement/stategen.py clean-all ${contest name}`：把 `stategen.*.tex` 刪掉
+
+### Docker
+
+不想裝套件的話可以用 Docker container，把上面任意一行的 `python3 statement/stategen.py` 換成 `./statement/stategen.sh` 就可以了。第一次下載 texlive docker image 的話需要下載約 2.27 GB 的檔案。
 
 ## Credit
 
