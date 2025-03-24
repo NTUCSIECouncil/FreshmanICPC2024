@@ -1,6 +1,6 @@
 {
-	"name": "Ji Qi Scan & Order",
-	"code": "Ji Qi Scan & Order",
+	"name": "JiQiScanOrder",
+	"code": "JiQiScanOrder",
 	"title": "Ji Qi Scan & Order",
 	"memory_limit": 256,
 	"time_limit": 1.0,
