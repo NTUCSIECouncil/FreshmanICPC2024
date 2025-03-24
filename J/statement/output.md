@@ -1,0 +1,1 @@
+Output the flag without any additional spaces or characters.
