@@ -1,7 +1,7 @@
 {
-	"name": "aplusb",
-	"code": "aplusb",
-	"title": "A plus B problem",
+	"name": "librarytreasurehunt",
+	"code": "librarytreasurehunt",
+	"title": "Digging for Secrets: Library Treasure Hunt",
 	"memory_limit": 256,
 	"time_limit": 1.0,
 	"type": "Batch",

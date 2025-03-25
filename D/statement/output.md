@@ -1,1 +1,2 @@
-Output $a + b$.
+Output the flag `CSIE{<flag>}`.
+

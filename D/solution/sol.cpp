@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-    long long a, b;
-    cin >> a >> b;
-    cout << a + b << "\n";
+	cout << "CSIE{W3lOvEc7F}" << endl;
+	return 0;
 }
