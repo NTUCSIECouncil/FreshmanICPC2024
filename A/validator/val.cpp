@@ -3,9 +3,15 @@ using namespace std;
 
 int main(int argc, char **argv) {
     registerValidation(argc, argv);
-    int a = inf.readInt(0, 2000000000);
-    inf.readSpace();
-    int b = inf.readInt(0, 2000000000);
+    const int MAXlen = 1'000'000;
+    const int constT = 21;
+    const string secret_str = "WelcomeToFreshmenICPC";
+
+    int T = inf.readInt(constT, constT, "T");
     inf.readEoln();
+    for (int i = 0; i < T; i++) {
+        string line = inf.readLine("[a-zA-Z]{1,1000000}", "line");
+        // inf.readEoln();
+    }
     inf.readEof();
 }

@@ -1,7 +1,7 @@
 {
-	"name": "aplusb",
-	"code": "aplusb",
-	"title": "A plus B problem",
+	"name": "acrostics",
+	"code": "A",
+	"title": "Acrostics are What We All Love",
 	"memory_limit": 256,
 	"time_limit": 1.0,
 	"type": "Batch",
