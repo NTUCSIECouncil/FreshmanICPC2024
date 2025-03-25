@@ -18,6 +18,5 @@ The constraints are as follows:
 - $1 \le n \le 10^5$
 - $\forall i: 1 \le w_i \le 7$
 - $\forall i: 1 \le s_i \le t_i \le 14$
-- $\forall i: -10^9 \le a_i, b_i \le 10^9$
+- $\forall i: -10^9 \le a_i, b_i \le 10^9$, it is ensured that the pairs ($a_i$, $b_i$) are distinct.
 - $\forall i: 1 \le |c_i| \le 10$, and $c_i$ only contains uppercase and lowercase English letters.
-
