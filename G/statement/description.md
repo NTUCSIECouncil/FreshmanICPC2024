@@ -4,7 +4,7 @@ Abel is a famous mathematician who just got married! Now it's time to think abou
 
 The best thing about toys is that they can be entertaining yet educational. While Abel does have lots of toys, they are kind of... eccentric.
 
-Each box in Abel's toy collection contains several bouncy balls. These balls come in $n$ different colors, numbered from $0$ to $n - 1$. There are sufficiently many balls for a single color, so you won't run out of any color during the playthough! When you pick two such bouncy balls and squeeze one against another, they will *fuse* together and generate a new color! To prevent chaos, these balls have some very special properties. Let $f(a, b)$ denote the color produced when you take color $a$ in the left hand and $b$ in the right hand, then fuse them.
+Each box in Abel's toy collection contains several bouncy balls. These balls come in $n$ different colors, numbered from $0$ to $n - 1$. There are sufficiently many balls for a single color, so you won't run out of any color during the playthrough! When you pick two such bouncy balls and squeeze one against another, they will *fuse* together and generate a new color! To prevent chaos, these balls have some very special properties. Let $f(a, b)$ denote the color produced when you take color $a$ in the left hand and $b$ in the right hand, then fuse them.
 
 1. No matter what the colors of the original balls are, the newly produced color $f(a, b)$ is always present in the box.
 2. There is a "transparent color" $e \in \\{0, 1, \ldots, n - 1\\}$ such that fusing any ball with color $c$ with it will produce a ball with color $f(e, c) = f(c, e) = c$.
