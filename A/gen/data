@@ -1,0 +1,10 @@
+@subtask samples
+manual sample1.in
+
+@subtask full
+@include samples
+gen 0 0
+gen 100 100
+gen 77777 1283777
+gen 1999999999 1827387123
+gen 2000000000 2000000000
