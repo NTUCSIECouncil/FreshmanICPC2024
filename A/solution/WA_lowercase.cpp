@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    char s[] = "WelcomeToFreshmenICPC";
+    char s[] = "WelcomeToFreshmanICPC";
     for (char *p = s, i = 0; i < strlen(s); ++i, ++p) {
       *(p) = tolower(*(p));
     }

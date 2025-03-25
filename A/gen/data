@@ -1,5 +1,5 @@
 @subtask samples
-manual sample1.in
+manual rick_roll.in
 
 @subtask full
 @include samples

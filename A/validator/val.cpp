@@ -5,7 +5,7 @@ int main(int argc, char **argv) {
     registerValidation(argc, argv);
     const int MAXlen = 1'000'000;
     const int constT = 21;
-    const string secret_str = "WelcomeToFreshmenICPC";
+    const string secret_str = "WelcomeToFreshmanICPC";
 
     int T = inf.readInt(constT, constT, "T");
     inf.readEoln();

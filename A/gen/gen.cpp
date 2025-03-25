@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     registerGen(argc, argv, 1);
-    const string secret_str = "WelcomeToFreshmenICPC";
+    const string secret_str = "WelcomeToFreshmanICPC";
     const uint T = 21;
     cout << T << '\n';
 	const int min_len = opt<int>("min_len", 1);
