@@ -10,7 +10,7 @@ $T = 21$
 
 $1 \leq |S_i| \leq 10^6$
 
-$S$ consists only of English letters (both uppercase and lowercase), i.e., `a-z` and `A-Z`.
+$S_i$ consists only of English letters (both uppercase and lowercase), i.e., `a-z` and `A-Z`.
 
 $S_{1,1} = \texttt{'W'}$
 $S_{2,1} = \texttt{'e'}$

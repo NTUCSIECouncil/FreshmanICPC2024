@@ -1,4 +1,5 @@
 #include "testlib.h"
+#include "cassert";
 using namespace std;
 
 int main(int argc, char **argv) {
@@ -11,6 +12,7 @@ int main(int argc, char **argv) {
     inf.readEoln();
     for (int i = 0; i < T; i++) {
         string line = inf.readLine("[a-zA-Z]{1,1000000}", "line");
+        assert(line[0] == secret_str[i]);
         // inf.readEoln();
     }
     inf.readEof();
