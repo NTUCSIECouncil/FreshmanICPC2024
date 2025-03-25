@@ -1,4 +1,8 @@
+#if __has_include("lib0026.h")
+#include "lib0026.h"
+#else
 #include "group.h"
+#endif
 #include <iostream>
 #include <string>
 #include <vector>
@@ -40,7 +44,7 @@ namespace
 }
 
 
-int compute(int a, int b)
+int fuse_ball(int a, int b)
 {
     ::totalQ++;
     if (::totalQ > ::maxQ)

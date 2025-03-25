@@ -1,7 +1,7 @@
 If you program runs successfully, then the sample grader will output one of the following:
 
 
-If your progam is judged as **Accepted**, the sample grader will output a line `Accepted`.
+If your progam is judged as correct, the sample grader will output a line `Accepted`.
 
 Otherwise, the sample grader will output `Wrong Answer: MSG` where `MSG` and its corresponding reason is listed as follows:
 

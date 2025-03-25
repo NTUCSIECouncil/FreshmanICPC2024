@@ -1,4 +1,8 @@
+#if __has_include("lib0026.h")
+#include "lib0026.h"
+#else
 #include "group.h"
+#endif
 #include <random>
 
 bool is_abelian(int n)
