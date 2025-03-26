@@ -76,4 +76,4 @@ The following are hand rankings sorting from highest to lowest priority. Note th
      - S10, H3, D6, C8, SA
      - H5, D2, C9, SJ, QD
 
-Your goal is to calculate the winning probability based on the two starting hands. The probabilities should be derived considering all possible board outcomes (community cards). Your answer is considered correct if the error is smaller than $10^{-3}$.
+Your goal is to calculate the winning probability based on the two starting hands. The probabilities should be derived considering all possible board outcomes (community cards). Your answer is considered correct if the error is smaller than $10^{-2}$.
