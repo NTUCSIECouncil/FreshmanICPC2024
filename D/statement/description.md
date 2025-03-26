@@ -16,7 +16,7 @@ Following the clues inscribed on the chest, you are led to an old, locked librar
 
 ###### File Structure
 ```
-ws1:/tmp2/pD:FreshmanICPC
+ws5:/tmp2/pD:FreshmanICPC
 └── compressed file
 ```
 ###### Hint
