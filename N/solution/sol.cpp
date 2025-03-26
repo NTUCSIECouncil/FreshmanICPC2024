@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define N 100000
+#define N 500000
 
 struct card
 {
@@ -137,7 +137,7 @@ int game()
         min_rank_you = min(min_rank_you, which_hand_rankings(yours));
         min_rank_opponent = min(min_rank_opponent, which_hand_rankings(opponents));
     }
-    if (min_rank_you <= min_rank_opponent)
+    if (min_rank_you < min_rank_opponent)
         return 1;
     else
         return 0;

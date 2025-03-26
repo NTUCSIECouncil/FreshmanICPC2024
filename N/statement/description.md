@@ -10,7 +10,6 @@ For this problem, we assume the following conditions to make the problem simpler
   - There are five community cards, each player try to make their ranking as high as possible from using their two cards and three cards from community cards.
 - The deck consists of 52 standard playing cards (no jokers), so no cards would be repeated.
 - If two players have the cards of the same rank, it's considered a draw.
-- When there's a draw, you win.
 
 The following are hand rankings sorting from highest to lowest priority. Note that in the following examples, in the suits part, S stands for spade, H for Heart, D for Diamond and C for club. For example, S5 means spade with number 5.
 
@@ -77,4 +76,4 @@ The following are hand rankings sorting from highest to lowest priority. Note th
      - S10, H3, D6, C8, SA
      - H5, D2, C9, SJ, QD
 
-Your goal is to calculate the winning probability based on the two starting hands. The probabilities should be derived considering all possible board outcomes (community cards). Your answer is considered correct if the error is smaller than $10^{-2}$.
+Your goal is to calculate the winning probability based on the two starting hands. The probabilities should be derived considering all possible board outcomes (community cards). Your answer is considered correct if the error is smaller than $10^{-3}$.
