@@ -1,0 +1,44 @@
+@subtask samples
+manual sample1.in
+
+@subtask full
+@include samples
+
+manual strong.in
+gen 10 1    hafjkgslfhgdjflhdjgs
+gen 10 3    lsdafsdghjkdmlfdsfsmdg
+gen 10 5    awgjfkmvksgmfjkmdf
+gen 10 7    gfdsjkmgaethojslfdm
+gen 10 9    ewfgofjkeajgrotfbdkm
+gen_range 10 2 5 10   egrhetjyrkutliky;
+gen_range 10 2 5 10   egrhtjyhkjg
+gen_range 10 10 5 10   ewargeshtjhkj
+gen_range 10 10 5 10   egrhdxgjfhc,gj
+gen_range 10 10 5 10   ewgzrhdxtjgfhc,gj
+
+gen 5000 1   eiawjfkdewitrjiwgfksjg
+gen 5000 100   ewofadskjalmkagrojeawgrfb
+gen 5000 2000   eiawjfkdewitrjiwgfksjg
+gen 5000 5000   rsyetuydufkjyhtrgthhret
+gen 5000 5000   ewofadskjalmkagrojeawgrfb
+
+gen 4000000 1         ytrjhkcghhtejyd
+gen 4000000 100       htjrytkujyl,gmhfgnd
+gen 4000000 2000      eiawjfkdewitrjiwgfksjg
+gen 4000000 10000     tawrytseyjdrkufltigtkjtherg
+gen 4000000 100000    teydrukftliukyjrru6
+gen 4000000 1000000   eiawjfkdewitrjiwgfksjg
+gen 4000000 2000000   erhtjghkjlkjhjghgrhjmh,
+gen 4000000 4000000   ewofadskjalmkagrojeawgrfb
+
+gen_range 4000000 200 100 200       eawrhstjdthkfyj
+gen_range 4000000 200 0 0           eawrhstjdthkfyj
+gen_range 4000000 200 1000000 4000000   asfgdhgfdjhgkjh
+gen_range 4000000 4000000 100 200   asfgdhgfdjhgkjh
+gen_range 4000000 4000000 100000 2000000   asfgdhgfdjhgkjh
+gen_range 4000000 4000000 0 1   asfgdhgfdjhgkjh
+gen_range 4000000 3500000 3000000 4000000   erstrhjdyhkjhgljj,mhj
+gen_range 4000000 4000000 100 200   fgshgjhmkjh,.kjgkjgfhfg
+gen_range 4000000 4000000 1000000 2000000   rghtjhkjhtrgefghgj
+gen_range 4000000 3 0 3   setjrdykfjthrghjfhg
+

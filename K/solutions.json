@@ -1,0 +1,26 @@
+{
+	"sol.cpp": {
+		"verdict": "model_solution"
+	},
+	"sol1.cpp": {
+		"verdict": "correct"
+	},
+	"sol2.cpp": {
+		"verdict": "correct"
+	},
+	"sol3.cpp": {
+		"verdict": "correct"
+	},
+	"sparse_table.cpp": {
+		"verdict": "correct"
+	},
+	"twolog.cpp": {
+		"verdict": "time_limit"
+	},
+	"brute.cpp": {
+		"verdict": "time_limit"
+	},
+	"wa.cpp": {
+		"verdict": "incorrect"
+	}
+}
