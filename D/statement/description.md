@@ -19,6 +19,16 @@ Following the clues inscribed on the chest, you are led to an old, locked librar
 ws1:/tmp2/pD:FreshmanICPC
 └── compressed file
 ```
+###### Hint
+You may need to use `cp` to copy the file to your own home directory or use `scp` to copy it to your local machine before you can start working on it.
+
+
+
+
+
+
+
+
 
 
 
