@@ -1,0 +1,1 @@
+Output `Seeya` if you can see the hacker and snipe him down. Otherwise, output `QQ`.
