@@ -67,6 +67,7 @@ int main(int argc, char *argv[])
     for (auto p : primes)
         s += to_string(p) + " ";
     s.back() = '#';
+    s.resize((s.size() + 7) / 8 * 8, ' ');
     cerr << s << '\n';
-    cout << ::encode(s) << '\n';
+    cout << ::encode(s + s) << '\n';
 }

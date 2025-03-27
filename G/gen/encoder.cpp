@@ -47,5 +47,7 @@ namespace
 int main(int argc, char *argv[])
 {
     registerGen(argc, argv, 1);
-    cout << ::encode(argv[1]) << '\n';
+    string input(argv[1]);
+    input.resize((input.size() + 7) / 8 * 8, ' ');
+    cout << ::encode(input + input) << '\n';
 }

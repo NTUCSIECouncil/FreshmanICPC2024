@@ -17,8 +17,9 @@
 namespace
 {
     static const int maxQ = 60;
+    static const int maxN = 1'000'000;
     int totalQ = 0;
-    int N;
+    long long N;
     std::vector<std::vector<int>> computation;
 
     enum wrong_reason
@@ -57,48 +58,6 @@ namespace
     static const int secret2[8] = {1, 3, 4, 2, 7, 0, 6, 5};
     static const std::string token = "fff2bc4eea31886d937c535d7021ae050c7c49d593d84f3e25f9f186c512a905";
     static const unsigned base = 23;
-    std::string encode(std::string s)
-    {
-        int perm[] = {0, 1, 2, 3, 4, 5, 6, 7};
-        while ((int)s.size() % 8 != 0)
-            s.push_back(' ');
-
-        std::string t(s.size(), ' ');
-        for (int i = 0; i < (int)s.size(); i += 8)
-        {
-            for (int j = 0; j < 8; j++)
-                perm[j] = secret2[perm[j]];
-            for (int j = 0; j < 8; j++)
-            {
-                t[i + j] = s[i + perm[j]] ^ secret[j];
-                assert(32 <= t[i + j] && t[i + j] < 127);
-            }
-        }
-        return t;
-    }
-
-    std::string decode(const std::string &s)
-    {
-        int perm[] = {0, 1, 2, 3, 4, 5, 6, 7};
-
-        std::string t(s.size(), ' ');
-        for (int i = 0; i < (int)s.size(); i += 8)
-        {
-            for (int j = 0; j < 8; j++)
-                perm[j] = secret2[perm[j]];
-            for (int j = 0; j < 8; j++)
-                t[i + perm[j]] = s[i + j] ^ secret[j];
-        }
-        return t;
-    }
-
-    unsigned compute_seed(const std::string &s)
-    {
-        unsigned seed = 0;
-        for (auto &c : s)
-            seed = seed * base + c;
-        return seed;
-    }
 
     void __exit_security_violation(bool condition)
     {
@@ -128,6 +87,53 @@ namespace
         std::cout << token << std::endl;
         std::cerr << "Accepted" << std::endl;
         exit(0);
+    }
+
+    std::string encode(std::string s)
+    {
+        int perm[] = {0, 1, 2, 3, 4, 5, 6, 7};
+        while ((int)s.size() % 8 != 0)
+            s.push_back(' ');
+
+        std::string t(s.size(), ' ');
+        for (int i = 0; i < (int)s.size(); i += 8)
+        {
+            for (int j = 0; j < 8; j++)
+                perm[j] = secret2[perm[j]];
+            for (int j = 0; j < 8; j++)
+            {
+                t[i + j] = s[i + perm[j]] ^ secret[j];
+                assert(32 <= t[i + j] && t[i + j] < 127);
+            }
+        }
+        return t;
+    }
+
+    std::string decode(const std::string &s)
+    {
+        __exit_security_violation(s.size() % 8 != 0 || s.size() == 0);
+        int perm[] = {0, 1, 2, 3, 4, 5, 6, 7};
+
+        std::string t(s.size(), ' ');
+        for (int i = 0; i < (int)s.size(); i += 8)
+        {
+            for (int j = 0; j < 8; j++)
+                perm[j] = secret2[perm[j]];
+            for (int j = 0; j < 8; j++)
+            {
+                t[i + perm[j]] = s[i + j] ^ secret[j];
+                __exit_security_violation(t[i + perm[j]] != ' ' && t[i + perm[j]] != '#' && !isdigit(t[i + perm[j]]));
+            }
+        }
+        return t;
+    }
+
+    unsigned compute_seed(const std::string &s)
+    {
+        unsigned seed = 0;
+        for (auto &c : s)
+            seed = seed * base + c;
+        return seed;
     }
 
     int fast_mod_pow(int b, int p, int m)
@@ -204,13 +210,16 @@ int main()
     // ================================== Actual Grader Start ==================================
 
     std::string input;
-    std::getline(std::cin, input);
-    __exit_security_violation(input.size() % 8 != 0 || input.size() == 0);
+    std::string data;
+    __exit_security_violation(!((bool)std::getline(std::cin, input)));
+    data = ::decode(std::string(input.begin(), input.begin() + (input.size() / 2)));
     input = ::decode(input);
+    __exit_security_violation(input != data + data);
 
-    __exit_security_violation(input.find("#") == std::string::npos);
-    std::string groups_str = input.substr(0, input.find("#"));
-    std::string product_str = input.substr(input.find("#") + 1);
+
+    __exit_security_violation(data.find("#") == std::string::npos);
+    std::string groups_str = data.substr(0, data.find("#"));
+    std::string product_str = data.substr(data.find("#") + 1);
 
     {
         std::stringstream ss;
@@ -231,8 +240,11 @@ int main()
 
     N = 1;
     for (auto g : groups)
+    {
+        __exit_security_violation(g <= 0 || maxN < g);
         N *= g;
-    __exit_security_violation(N > 1'000'000);
+        __exit_security_violation(N > maxN);
+    }
 
     unsigned seed = compute_seed(input);
     std::mt19937 rd(seed);
@@ -272,7 +284,7 @@ int main()
     // ================================== Sample Grader Start ==================================
     // END SECRET
     bool answer;
-    std::cin >> N;
+    std::cin >> N >> answer;
     computation.resize(N, std::vector<int>(N));
     for (int i = 0; i < N; i++)
         for (int j = 0; j < N; j++)
