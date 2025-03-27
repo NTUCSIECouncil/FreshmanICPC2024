@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, s[100015];
+int n, s[200015];
 map<string, int> mp, vis;
 
 signed main(){
