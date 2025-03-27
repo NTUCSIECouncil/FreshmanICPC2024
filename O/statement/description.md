@@ -1,5 +1,5 @@
-## Problem Description
-A compiler is a crucial software tool that translates high-level programming languages (such as C, C++, and Java) into machine code. It is an essential component of modern software development, playing a key role in improving execution performance, cross-platform compatibility, and developer efficiency.
+##### Problem Description
+A compiler is a crucial software tool that translates high-level programming languages (such as C, C++, and Java) into machine code that the operating system can comprehend. It is an essential component of modern software development, playing a key role in improving execution performance, cross-platform compatibility, and developer efficiency.
 
 Key Functions of a Compiler:
 1. Lexical Analysis – Converts source code into tokens, identifying keywords, variable names, and other syntax elements.
@@ -10,9 +10,11 @@ Key Functions of a Compiler:
 6. Code Generation – Translates the optimized intermediate representation into machine-specific instructions.
 7. Linking and Loading – Integrates different modules and libraries to create a final executable program.
 
-In this problem, we want to implement a important feature of code generation, Register Allocation. After the compiler transformed human-readable code into intermediate code that is easy for machines to read, we need to allocate registers for each variables. Note that the intermediate code is usually in the form of Three-Address-Code which is different from what we are dealing with in this problem.
+In this problem, we want to implement a important feature of code generation, Register Allocation. After the compiler transformed human-readable code into intermediate code that is easy for machines to read, we need to allocate registers for each variables.
 
-In the language that we are implementing a compiler on, there is only one type of expression in the form of `a = func(...)`. After the execution, the return value of `func` will be stored into `a`. We have no method to obtain the inner implementation of `func`. We only know that the function is always safe and always returns a value that can be saved by `a`.
+Registers are a fundemental part of the CPU. Every variable can be stored in many possible parts in the computer. However, registers offer quick access time compared to storing the data in the memory since it is directly within the CPU. Therefore, allocating enough registers to prevent loading the variables into memory is also a quintessential part of the compiler's job.
+
+In the language that we are implementing a compiler on, there is only one type of expression in the form of `a = func(...)`. After the execution, the return value of `func` will be stored into `a`. We have no method to obtain the inner implementation of `func`. We only know that the function is always safe and returns a value that can be saved by `a`.
 
 A notable characteristic of `func` is that it is not deterministic i.e. it will not necessarily return the same value even when the same parameter is passed. For example:
 ```
@@ -34,7 +36,9 @@ a = func(b)
 ```
 This is because that `b` is not defined before its usage. 
 
-Note that since we know nothing about `func`, you can not skip the execution of a function. For example, even if the `a` in the code above is never used afterwards, you still have to execute `func(b)`. Actually storing `a` in a register is however optional.
+Note that since we know nothing about `func`, you can not skip the execution of a function. For example, even if the `a` in the code above is never used afterwards, you still have to execute `func(b)`. Actually storing `a` in a register is however optional. Also, during the execution of the function, the register to store the parameter can already be freed and given other uses. i.e. in the `a = func(b)` case, assuming that `b` is never used afterwards, `a` can use the same register as `b`.
+
+Now, given a code file. If we want to make all variables to be stored in a register, what is the minimum number of registers we need?
 
 To simplify the problem for you to solve, we have already transformed the code into its intermediate representation form.
 
@@ -55,9 +59,10 @@ b 1 a
 c 2 a b
 ```
 
-## Sample Testcases
 
-### Sample Input 1
+##### Sample Testcases
+
+<!-- ###### Sample Input 1
 ```
 4
 a 0
@@ -66,12 +71,12 @@ c 2 a b
 d 3 a b c
 ```
 
-### Sample Output 1
+###### Sample Output 1
 ```
 3
-```
+``` -->
 
-### Sample 1 Explanation
+###### Sample 1 Explanation
 The original code is like this.
 ```
 a = func()
@@ -81,7 +86,7 @@ d = func(a, b, c)
 ```
 `d` is never used afterwards, so we do not have to store it into any register.
 
-### Sample Input 2
+<!-- ### Sample Input 2
 ```
 ```
 
@@ -96,4 +101,4 @@ d = func(a, b, c)
 
 ### Sample Output 3
 ```
-```
+``` -->
