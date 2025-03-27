@@ -5,7 +5,7 @@ using namespace std;
 int map(string &s){
     int ret = 0;
     for (auto &c:s){
-        ret = ret * 26 + c - 'a';
+        ret = ret * 27 + c - 'a' + 1;
     }
     return ret;
 }
