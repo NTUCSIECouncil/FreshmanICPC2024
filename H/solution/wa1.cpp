@@ -4,7 +4,7 @@ using namespace std;
 
 typedef long long ll;
 #define P 1000000007
-#define MAXN 150000
+#define MAXN 300000
 
 int add(int a, int b){
     return (a + b) % P;
