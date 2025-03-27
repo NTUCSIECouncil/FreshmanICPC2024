@@ -3,7 +3,7 @@ using namespace std;
 
 int main(int argc, char **argv) {
     registerValidation(argc, argv);
-    int n = inf.readInt(1, 5000000);
+    int n = inf.readInt(1, 4000000);
     inf.readSpace();
     int c = inf.readInt(0, n);
     inf.readEoln();
