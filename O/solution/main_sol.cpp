@@ -10,7 +10,7 @@ int map(string &s){
     return ret;
 }
 
-int last_use[26 * 26 * 26 * 26];
+int last_use[27 * 27 * 27 * 27];
 int main(){
     int linesOfInput;
 
