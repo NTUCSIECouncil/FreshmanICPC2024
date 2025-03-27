@@ -13,14 +13,14 @@ void flip (bitset<MAXN> &coins, int position, const int n, const int k) {
   }
 }
 
-int bf(const int n, const int k, int t, bitset<MAXN> &coins) {
+int bf(const int n, int position, const int k, int t, bitset<MAXN> &coins) {
   // cerr << ">> " << n << ' ' << k << ' ' << t << ' ' << coins << '\n';
   if (t == 0) return coins.count() == n;
   int ans = 0;
-  for (int i = 0; i < n; i++) {
-    flip(coins, i, n, k);
-    ans = add(ans, bf(n, k, t - 1, coins));
-    flip(coins, i, n, k);
+  for (int p = position; p < n; p++) {
+    flip(coins, p, n, k);
+    ans = add(ans, bf(n, p, k, t - 1, coins));
+    flip(coins, p, n, k);
   }
   // cerr << "<< " << n << ' ' << k << ' ' << t << ' ' << coins << ' ' << ans << '\n';
   return ans;
@@ -39,7 +39,6 @@ int main() {
     return 0;
   }
   bitset<MAXN> coins;
-  flip(coins, 0, n, k);
-  cout << bf(n, k, t-1, coins) << '\n';
+  cout << bf(n, 0, k, t, coins) << '\n';
   return 0;
 }
