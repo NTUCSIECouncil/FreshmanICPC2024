@@ -15,6 +15,10 @@ gen0 -max_n 5 -max_t 5 0
 gen0 -max_n 5 -max_t 5 1
 gen0 -max_n 5 -max_t 6 2
 gen0 -max_n 5 -max_t 7 3
+gen0 -max_n 32 -max_t 4
+gen0 -max_n 25 -max_t 8
+gen0 -max_n 20 -max_t 8
+gen0 -max_n 27 -max_t 5
 
 gen0 -max_n 32 -max_k 32 -max_t 32 1
 gen0 -max_n 32 -max_k 32 -max_t 32 2
