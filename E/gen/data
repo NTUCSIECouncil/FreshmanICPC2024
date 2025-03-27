@@ -1,0 +1,50 @@
+@subtask samples
+manual sample1.in
+
+@subtask full
+@include samples
+gen -max_n 5 -max_p 20 -max_l 0
+gen -max_n 5 -max_p 1 -max_l 1
+gen -max_n 5 -max_p 1 -max_l 5
+gen -max_n 5 -max_p 20 -max_l 100
+gen -max_n 6 -max_p 1 -max_l 5
+gen -max_n 6 -max_p 20 -max_l 100
+gen -max_n 8 -max_p 1 -max_l 5
+gen -max_n 8 -max_p 20 -max_l 100
+gen -max_n 10 -max_p 20 -max_l 100
+gen -max_n 10 -min_p 800000000 -ascending_p 1 -no_l_constraint 1
+gen -max_n 10 -min_p 800000000 -ascending_p 1
+gen -max_n 10 -min_p 999999000 -ascending_p 1 -no_l_constraint 1
+
+gen -max_n 25 -min_p 999999000 -ascending_p 1 -no_l_constraint 1
+gen -max_n 100 -max_p 100 -max_l 5000
+gen -max_n 100 -min_p 800000000 -ascending_p 1 -no_l_constraint 1
+gen -max_n 1000 -min_p 800000000 -ascending_p 1
+gen -max_n 1000 -min_p 800000000 -ascending_p 1 -no_l_constraint 1
+
+gen -min_n 199900 -max_p 1 -max_l 1
+gen -min_n 199900 -max_p 1 -max_l 1000
+gen -min_n 199900 -max_p 1 -max_l 199900
+gen -min_n 199900 -max_p 2 -max_l 100000
+gen -min_n 199900 -max_p 100 -max_l 1000000
+gen -min_n 199900 -max_p 25 -no_l_constraint 1 -ascending_p 1 -ascending_l 1
+gen -min_n 199900 -max_p 25 -ascending_p 1 -ascending_l 1
+gen -min_n 199900 -max_p 25 -max_l 1000
+gen -min_n 199900 -max_p 25 -max_l 5000
+gen -min_n 199900 -max_p 100 -max_l 99999
+
+gen -min_n 199900 -min_p 999999999 -ascending_l 1
+gen -min_n 199900 -min_p 999999999 -no_l_constraint 1
+gen -min_n 199900 -min_p 999999999 -ascending_l 1 -ascending_p 1 -shuffle_task 0
+gen -min_n 200000 -min_p 1000000000 -max_l 0
+gen -min_n 200000 -min_p 1000000000 -no_l_constraint 1
+gen -min_n 80000 -max_n 100000 -min_p 800000000 -max_p 1000000000 -min_l 0 -max_l 110000000000 -ascending_p 1 -ascending_l 1 -shuffle_task 1 -no_l_constraint 1
+
+gen -min_n 199900 -min_p 987654321 0
+gen -min_n 199900 -min_p 987654321 1
+gen -min_n 199900 -min_p 987654321 2
+gen -min_n 199900 -min_p 987654321 -ascending_l 1
+gen -min_n 199900 -min_p 987654321 -ascending_l 1 -shuffle_task 0
+gen -min_n 199900 -min_p 987654321 -max_l 10000000000
+gen -min_n 199900 -min_p 987654321 -max_l 100000000000
+gen -min_n 199900 -min_p 987654321 -max_l 100

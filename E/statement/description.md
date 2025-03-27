@@ -1,0 +1,1 @@
+You will be given two positive integers $a$ and $b$, please output $a + b$.
