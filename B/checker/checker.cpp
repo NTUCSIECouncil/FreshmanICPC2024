@@ -7,13 +7,13 @@
 void exit_WA(std::string message = "") {
     std::string output = "Wrong Answer";
     if (!message.empty()) output += ": " + message;
-    quitf(_wa, output.c_str());
+    quitf(_wa, "%s", output.c_str());
 }
 
 void exit_AC(std::string message = "") {
     std::string output = "Accepted";
     if (!message.empty()) output += ": " + message;
-    quitf(_ok, output.c_str());
+    quitf(_ok, "%s", output.c_str());
 }
 
 const std::string FLAGS[] = {
@@ -25,8 +25,6 @@ const std::string FLAGS[] = {
 
 int main(int argc, char *argv[]) {
     registerTestlibCmd(argc, argv);
-
-    int subtask = ans.readInt();
 
     std::set<std::string> userFlags;
 
@@ -44,9 +42,15 @@ int main(int argc, char *argv[]) {
         exit_WA("Too many flags submitted.");
     }
 
-    if (userFlags.find(FLAGS[subtask - 1]) == userFlags.end()) {
-        exit_WA("Flag " + toString(subtask) + " is incorrect.");
-    } else {
-        exit_AC("Flag " + toString(subtask) + " is correct.");
+    if (userFlags.size() < 5) {
+        exit_WA("Not all flags submitted.");
     }
+
+    for (int i = 0; i < 5; ++i) {
+        if (userFlags.find(FLAGS[i]) == userFlags.end()) {
+            exit_WA("Missing flag: " + FLAGS[i]);
+        }
+    }
+
+    exit_AC("All flags are correct.");
 }
