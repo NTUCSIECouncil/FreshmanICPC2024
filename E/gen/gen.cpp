@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     const long long min_l = opt<long long>("min_l", 0);
     const long long max_l = opt<long long>("max_l", MAXL);
     const bool ascending_p = opt<bool>("ascending_p", false);
-    const bool ascending_l = opt<bool>("ascending_l", true);
+    const bool ascending_l = opt<bool>("ascending_l", false);
     const bool shuffle_task = opt<bool>("shuffle_task", true);
     const bool no_l_constraint = opt<bool>("no_l_constraint", false);
     
