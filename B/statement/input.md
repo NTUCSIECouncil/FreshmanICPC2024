@@ -1,1 +1,1 @@
-No input.
+This problem does not have any input.
