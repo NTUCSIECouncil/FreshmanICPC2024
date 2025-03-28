@@ -1,7 +1,7 @@
 {
-	"name": "Estimate max achievements",
+	"name": "Estimated Task Completion",
 	"code": "E",
-	"title": "Estimate max achievements",
+	"title": "Estimated Task Completion",
 	"memory_limit": 256,
 	"time_limit": 1.0,
 	"type": "Batch",
