@@ -1,6 +1,6 @@
-The first line contains a integer $N$.
+The first line contains an integer $N$.
 
-The next $N$ lines all start with a string $s$ and a integer $k$.
+The next $N$ lines all start with a string $s$ and an integer $k$.
 
 - The name of each variable consists of lower case letters and the lengths are all within $1$ and $4$.
 - $N \leq 2 \times 10^5$

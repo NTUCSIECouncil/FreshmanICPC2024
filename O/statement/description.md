@@ -1,4 +1,3 @@
-##### Problem Description
 A compiler is a crucial software tool that translates high-level programming languages (such as C, C++, and Java) into machine code that the operating system can comprehend. It is an essential component of modern software development, playing a key role in improving execution performance, cross-platform compatibility, and developer efficiency.
 
 Key Functions of a Compiler:
@@ -58,47 +57,3 @@ a 0
 b 1 a
 c 2 a b
 ```
-
-
-##### Sample Testcases
-
-<!-- ###### Sample Input 1
-```
-4
-a 0
-b 1 a
-c 2 a b
-d 3 a b c
-```
-
-###### Sample Output 1
-```
-3
-``` -->
-
-###### Sample 1 Explanation
-The original code is like this.
-```
-a = func()
-b = func(a)
-c = func(a, b)
-d = func(a, b, c)
-```
-`d` is never used afterwards, so we do not have to store it into any register.
-
-<!-- ### Sample Input 2
-```
-```
-
-
-### Sample Output 2
-```
-```
-
-### Sample Input 3
-```
-```
-
-### Sample Output 3
-```
-``` -->
