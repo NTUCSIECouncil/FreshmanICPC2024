@@ -1,9 +1,9 @@
 {
 	"sol.cpp": {
-		"verdict": "correct"
+		"verdict": "model_solution"
 	},
 	"brute_force.cpp": {
-		"verdict": "model_solution"
+		"verdict": "time_limit"
 	},
 	"TA_sol.cpp": {
 		"verdict": "correct"

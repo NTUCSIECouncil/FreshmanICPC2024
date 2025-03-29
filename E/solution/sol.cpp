@@ -1,29 +1,51 @@
+//Challenge: Accepted
+#pragma GCC optimize("Ofast")
 #include <bits/stdc++.h>
 using namespace std;
-typedef pair<long long, long long> pll;
-
+#ifdef zisk
+void debug(){cout << endl;}
+template<class T, class ... U> void debug(T a, U ... b){cout << a << " ", debug(b...);}
+template<class T> void pary(T l, T r) {
+	while (l != r) cout << *l << " ", l++;
+	cout << endl;
+}
+#else
+#define debug(...) 0
+#define pary(...) 0
+#endif
+#define ll long long
+#define maxn 100005
+#define pii pair<ll, ll>
+#define ff first
+#define ss second
+#define io ios_base::sync_with_stdio(0);cin.tie(0);
+#define iter(v) v.begin(),v.end()
+#define SZ(v) (int)v.size()
+#define pb emplace_back
+const ll inf = 1LL<<60;
 int main() {
-  int n;
-  cin >> n;
-  vector<pll> task;
-  for (int i = 0; i < n; i++) {
-    long long p, l;
-    cin >> p >> l;
-    task.push_back({l, p});
-  }
-  sort(task.begin(), task.end());
-  long long cur_time = 0;
-  priority_queue<long long> pq;
-  for (auto [l, p] : task) {
-    if (l >= cur_time) {
-      pq.push(p);
-      cur_time += p;
-    } else if (p < pq.top()) {
-      cur_time += p - pq.top();
-      pq.pop();
-      pq.push(p);
+	io;
+    int n;
+    cin >> n;
+    vector<pii> v;
+    for (int i = 0;i < n;i++) {
+        ll ri, si;
+        cin >> ri >> si;
+        v.push_back({ri, si});
     }
-  }
-  cout << pq.size() << '\n';
-  return 0;
+    ll time = 0, ans = 0;
+    priority_queue<ll> pq;
+    sort(v.begin(), v.end(), [&] (pii a, pii b){return a.second+a.first < b.second+b.first;});
+    for (int i = 0;i < n;i++) {
+        if (time <= v[i].second) {
+            ans += 1;
+            time += v[i].first;
+            pq.push(v[i].first);
+        } else if (v[i].first < pq.top()) {
+            time = time - pq.top() + v[i].first;
+            pq.pop();
+            pq.push(v[i].first);
+        }
+    }
+    cout << ans << endl;
 }
