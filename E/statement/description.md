@@ -3,8 +3,8 @@ Eric is an overworked wage slave with a lot on his plate.
 He has $n$ tasks to complete, but it's unlikely he'll be able to finish them all on time.
 
 Each task is defined by:
- - $r_i$: the time required to complete the task.
- - $s_i$: the latest possible time the task can be started.
+* $r_i$: the time required to complete the task.
+* $s_i$: the latest possible time the task can be started.
 
 Unlike high-level wage slaves who can multitask, Eric can only work on one task at a time. He starts working at time 0 and must complete tasks sequentially. He can choose the order in which he completes tasks and may remain idle between tasks.
 
