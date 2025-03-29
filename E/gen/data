@@ -3,6 +3,8 @@ manual sample1.in
 
 @subtask full
 @include samples
+manual manual1.in
+
 gen -max_n 5 -max_p 20 -max_l 0
 gen -max_n 5 -max_p 1 -max_l 1
 gen -max_n 5 -max_p 1 -max_l 5
