@@ -1,0 +1,5 @@
+@testset full
+manual ac.in
+
+@subtask full
+@include full
