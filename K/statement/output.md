@@ -1,0 +1,1 @@
+Output the maximum possible area of the rectangular garden.

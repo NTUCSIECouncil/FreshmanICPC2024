@@ -1,0 +1,2 @@
+Since this problem involves a large amount of input, if writing in C++, please add `ios::sync_with_stdio(0); cin.tie(0);` at the beginning of the `main()` function.
+This is to prevent a Time Limit Exceeded error caused by slow input and output operations.
