@@ -1,0 +1,5 @@
+@testset full
+manual sample1.in
+
+@subtask full
+@include full
