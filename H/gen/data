@@ -1,0 +1,55 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+manual sample3.in
+
+@subtask full
+@include samples
+manual test1.in
+manual test2.in
+manual test3.in
+manual test4.in
+manual test5.in
+
+gen0 -max_n 5 -max_t 5 0
+gen0 -max_n 5 -max_t 5 1
+gen0 -max_n 5 -max_t 6 2
+gen0 -max_n 5 -max_t 7 3
+gen0 -max_n 32 -max_t 4
+gen0 -max_n 25 -max_t 8
+gen0 -max_n 20 -max_t 8
+gen0 -max_n 27 -max_t 5
+
+gen0 -max_n 32 -max_k 32 -max_t 32 1
+gen0 -max_n 32 -max_k 32 -max_t 32 2
+gen0 -max_n 32 -max_k 32 -max_t 32 3
+gen0 -min_n 31 -max_n 31 -max_t 32 1
+gen0 -min_n 31 -max_n 31 -min_k 11 -max_k 11 -max_t 32 1
+gen0 -min_n 31 -max_n 31 -min_k 12 -max_k 12 -max_t 32 1
+gen0 -min_n 10 -max_n 10 -min_k 8 -max_k 8 -max_t 32 0
+gen0 -min_n 10 -max_n 10 -min_k 8 -max_k 8 -max_t 32 1
+gen0 -min_n 10 -max_n 10 -min_k 7 -max_k 7 -max_t 32 0
+gen0 -min_n 10 -max_n 10 -min_k 7 -max_k 7 -max_t 32 1
+
+gen 1
+gen 2
+gen 3
+gen 4
+gen 5
+gen 878787
+gen 114514
+gen 11451419
+gen 48763
+gen 487633333
+gen 42
+gen 2024
+gen 123456789
+gen 987654321
+gen 135792468
+gen 60
+gen 168
+gen 360
+gen 504
+gen 660
+gen 1092
+gen 2448

@@ -1,0 +1,14 @@
+{
+	"sol.cpp": {
+		"verdict": "model_solution"
+	},
+	"brute_force.cpp": {
+		"verdict": "time_limit"
+	},
+	"TA_sol.cpp": {
+		"verdict": "correct"
+	},
+	"wa_all_complete.cpp": {
+		"verdict": "incorrect"
+	}
+}

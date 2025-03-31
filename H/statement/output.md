@@ -1,0 +1,1 @@
+Output a single integer representing the number of distinct ways to achieve the goal, modulo $10^9+7$.
