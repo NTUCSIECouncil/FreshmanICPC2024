@@ -1,0 +1,35 @@
+@subtask full
+encoder "1#"
+encoder "2#"
+encoder "3#"
+encoder "2 2#"
+encoder "3 2#2"
+abelian 100 0.5
+abelian 144 0.5
+abelian 6912 0.5
+abelian 82944 0.2
+abelian 82944 0.5
+abelian 82944 0.7
+abelian 99991 0.5
+abelian 99997 0.5
+abelian 100000 0.5
+encoder "2 4 4 81 2 8 2#"
+encoder "2 4 4 81 2 8 2#1 1 1 80"
+encoder "3 167 2#2"
+encoder "7 11 13 41 3#2"
+encoder "3 2 641 13 2#2"
+encoder "11 5 101 3 3 2#10 1 1 2"
+encoder "3 7 31 31 31#"
+encoder "7 31 31 31 3#2 25 25"
+encoder "3 10000#2"
+encoder "3 20000#2"
+encoder "3 30000#2"
+encoder "3 40000#2"
+encoder "3 200000#2"
+encoder "3 300000#2"
+encoder "5 10000#4"
+encoder "5 20000#4"
+encoder "5 30000#4"
+encoder "5 40000#4"
+encoder "5 150000#4"
+encoder "5 200000#4"
