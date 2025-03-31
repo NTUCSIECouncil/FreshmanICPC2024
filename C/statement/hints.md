@@ -1,0 +1,1 @@
+You can explore utility functions and data structures in the C++ STL (Standard Template Library) at [cppreference](https://en.cppreference.com/). Consider looking into types like `string`, `set`, and functions like `sort` -- they might come in handy!
