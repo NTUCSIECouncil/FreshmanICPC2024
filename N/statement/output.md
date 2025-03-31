@@ -1,0 +1,1 @@
+Output the probability of winning, ensuring that you follow the simplified rule stated in the description rather than the original.
