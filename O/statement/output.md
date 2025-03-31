@@ -1,0 +1,1 @@
+Output a line of number representing the answer.

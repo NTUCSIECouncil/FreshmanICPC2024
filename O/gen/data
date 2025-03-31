@@ -1,0 +1,15 @@
+@subtask samples
+manual sample1.in
+manual sample2.in
+
+@subtask full
+@include samples
+gen_rand 5 100
+gen_rand 1000 5000
+gen_rand 200000 1000000 a
+gen_rand 200000 1000000 b
+gen_rand 200000 1000000 c
+gen_rand 200000 1000000 d
+gen_rand 200000 1000000 e
+gen_rand 200000 1000000 f
+gen_rand 200000 1000000 g
