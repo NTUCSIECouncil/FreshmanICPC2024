@@ -1,0 +1,24 @@
+@subtask samples
+manual rick_roll.in
+
+@subtask full
+@include samples
+gen -min_len 1 -max_len 1
+gen -min_len 1 -max_len 2
+gen -min_len 1 -max_len 3
+gen -min_len 1 -max_len 4
+gen -min_len 1 -max_len 5
+gen -min_len 2 -max_len 2
+gen -min_len 3 -max_len 3
+gen -min_len 3 -max_len 5
+gen -min_len 20 -max_len 20
+gen -min_len 50 -max_len 50
+gen -min_len 1000
+gen -min_len 100000
+gen -min_len 500000
+gen -min_len 900000
+gen -min_len 999998
+gen -min_len 999999
+gen -min_len 1000000 0
+gen -min_len 1000000 1
+gen -min_len 1000000 3

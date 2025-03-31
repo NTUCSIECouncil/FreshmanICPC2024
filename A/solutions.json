@@ -1,0 +1,17 @@
+{
+	"AC_implement.cpp": {
+		"verdict": "model_solution"
+	},
+	"AC_expect.cpp": {
+		"verdict": "correct"
+	},
+	"AC_no_new_line": {
+		"verdict": "correct"
+	},
+	"WA.cpp": {
+		"verdict": "incorrect"
+	},
+	"WA_lowercase": {
+		"verdict": "incorrect"
+	}
+}
