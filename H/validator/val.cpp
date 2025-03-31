@@ -1,6 +1,6 @@
 #include "testlib.h"
 
-const int MAXN = 100000;
+const int MAXN = 200000;
 
 int main(int argc, char *argv[]) {
     registerValidation(argc, argv);

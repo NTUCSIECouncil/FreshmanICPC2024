@@ -43,13 +43,14 @@ gen 48763
 gen 487633333
 gen 42
 gen 2024
-gen 123456789
-gen 987654321
-gen 135792468
-gen 60
-gen 168
-gen 360
-gen 504
-gen 660
-gen 1092
-gen 2448
+
+gennonzero 123456789
+gennonzero 987654321
+gennonzero 135792468
+gennonzero 60
+gennonzero 168
+gennonzero 360
+gennonzero 504
+gennonzero 660
+gennonzero 1092
+gennonzero 2448
