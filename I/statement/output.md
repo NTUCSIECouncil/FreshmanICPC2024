@@ -1,0 +1,1 @@
+Output the starting index from which the vehicle can complete the loop. If there are multiple valid starting points, output the smallest index. If it's impossible to complete the loop from any station, output -1.

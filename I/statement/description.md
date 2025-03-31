@@ -1,0 +1,3 @@
+There are $N$ gas stations arranged in a circle. Each gas station provides $a_i$ liters of fuel, and the distance to the next gas station is $b_i$ kilometers. A vehicle with an infinite fuel tank and a fuel consumption rate of 1 km per liter needs to complete a full loop around the circle.
+
+Determine the starting gas station index (1-based) from which the vehicle can complete the loop. If multiple starting points are possible, output the smallest index. If it's impossible to complete the loop from any station, output -1.
